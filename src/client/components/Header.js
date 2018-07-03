@@ -5,18 +5,30 @@ import { connect } from 'react-redux';
 const Header = ({ auth }) => {
 	console.log('Am I logged in?', auth);
 	return (
-		<div>
-			<Link to="/">SSRReactApp</Link>
+		<nav className="nav-wrapper">
 			<div>
-				<Link to="/users">Users</Link>
-				<Link to="/admins">Admins</Link>
-				{auth ? (
-					<a href="/api/logout">Logout</a>
-				) : (
-					<a href="/api/auth/google">Login</a>
-				)}
+				<Link to="/" className="brand-logo left">
+					SSRAPP
+				</Link>
+				<ul className="right">
+					<li>
+						<Link to="/users">Users</Link>
+					</li>
+					<li>
+						<Link to="/admins">Admins</Link>
+					</li>
+					{auth ? (
+						<li>
+							<a href="/api/logout">Logout</a>
+						</li>
+					) : (
+						<li>
+							<a href="/api/auth/google">Login</a>
+						</li>
+					)}
+				</ul>
 			</div>
-		</div>
+		</nav>
 	);
 };
 
