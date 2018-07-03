@@ -1,4 +1,4 @@
-import { FETCH_USERS, FECHT_CURRENT_USER } from './types';
+import { FETCH_USERS, FETCH_CURRENT_USER } from './types';
 
 export const fetchUsers = () => async (dispatch, getState, api) => {
 	try {
@@ -18,7 +18,7 @@ export const fetchCurrentUser = () => async (dispatch, getState, api) => {
 		const res = await api.get('/current_user');
 
 		dispatch({
-			type: FECHT_CURRENT_USER,
+			type: FETCH_CURRENT_USER,
 			payload: res.data,
 		});
 	} catch (e) {
