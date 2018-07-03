@@ -2,7 +2,8 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import App from './App';
 import HomePage from './pages/HomePage';
-import UsersListPage, { loadData } from './pages/UsersListPage';
+import UsersListPage from './pages/UsersListPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 export default [
 	{
@@ -16,6 +17,9 @@ export default [
 			{
 				...UsersListPage,
 				path: '/users',
+			},
+			{
+				...NotFoundPage,
 			},
 		],
 	},
