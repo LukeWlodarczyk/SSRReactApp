@@ -7,6 +7,15 @@ const Header = ({ auth }) => {
 	return (
 		<div>
 			<Link to="/">SSRReactApp</Link>
+			<div>
+				<Link to="/users">Users</Link>
+				<Link to="/admins">Admins</Link>
+				{auth ? (
+					<a href="/api/logout">Logout</a>
+				) : (
+					<a href="/api/auth/google">Login</a>
+				)}
+			</div>
 		</div>
 	);
 };
