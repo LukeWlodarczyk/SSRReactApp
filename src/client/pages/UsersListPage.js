@@ -16,7 +16,7 @@ class UsersList extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="center-align" style={{ marginTop: '50px' }}>
 				<Helmet>
 					<title>{`${this.props.users.length} Users Loaded`}</title>
 					<meta property="og:title" content="Users" />
