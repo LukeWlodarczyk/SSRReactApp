@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const Header = ({ auth }) => {
-	console.log('Am I logged in?', auth);
 	return (
 		<nav className="nav-wrapper">
 			<div>
